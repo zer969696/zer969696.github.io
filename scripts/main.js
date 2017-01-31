@@ -6,7 +6,13 @@ $(document).ready(function() {
     var state = currentUrl.substr(res, 12).split('=')[1];
     
     if (state === '123456') {
-      alert("ok");
+      VK.init(function() {
+           alert('ok');
+           // Your code here
+        }, function() {
+           // API initialization failed
+           // Can reload page here
+      }, '5.62'); 
     } else {
       alert("ne ok");
     }
