@@ -2,8 +2,8 @@ $(document).ready(function() {
   var currentUrl = window.location.href;
   
   if (+currentUrl.split('&').length === 4) {
-    var res = a.indexOf('state=');
-    var state = a.substr(res, 12);
+    var res = currentUrl.indexOf('state=');
+    var state = currentUrl.substr(res, 12);
     
     if (state === '123456') {
       alert("ok");
