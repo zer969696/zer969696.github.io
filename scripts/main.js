@@ -33,7 +33,7 @@ function requestInit(redirectedUrl) {
   var accessToken = ((redirectedUrl.split('#')[1]).split('&')[0]).split('=')[1];
   var v = '5.62';
   
-  var methodParameters = 'owner_id=' + userId + '&need_user=0' + 'count=10';
+  var methodParameters = 'owner_id=' + userId + '&need_user=0&' + 'count=10';
   
-  console.log(methodName + methodParameters + '&' + accessToken + '&' + 'v=' + v);
+  console.log(methodName + methodParameters + '&access_token=' + accessToken + '&' + 'v=' + v);
 }
