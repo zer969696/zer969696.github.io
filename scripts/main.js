@@ -25,15 +25,14 @@ $(document).ready(function() {
 
 function requestInit(redirectedUrl) {
   var baseUrl = 'https://api.vk.com/method/';
-  
   var userId = (redirectedUrl.split('&')[2]).split('=')[1];
-  
   var methodName = 'audio.get?';
-  
   var accessToken = ((redirectedUrl.split('#')[1]).split('&')[0]).split('=')[1];
   var v = '5.62';
-  
   var methodParameters = 'owner_id=' + userId + '&need_user=0&' + 'count=10';
+  var req = methodName + methodParameters + '&access_token=' + accessToken + '&' + 'v=' + v;
   
-  return methodName + methodParameters + '&access_token=' + accessToken + '&' + 'v=' + v;
+  console.log(req);
+  
+  return req;
 }
