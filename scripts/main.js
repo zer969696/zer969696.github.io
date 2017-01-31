@@ -1,3 +1,3 @@
 $(document).ready(function() {
-  alert("ok");
+  window.location.href = "vk.com";
 })
