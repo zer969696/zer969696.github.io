@@ -13,7 +13,7 @@ $(document).ready(function() {
 //      
 //      var accessToken;
 //      var v;
-      console.log(requestInit(currentUrl));
+      requestInit(currentUrl);
       
     } else {
       alert("ne ok");
@@ -24,5 +24,16 @@ $(document).ready(function() {
 })
 
 function requestInit(redirectedUrl) {
-  console.log(redirectedUrl);
+  var baseUrl = 'https://api.vk.com/method/';
+  
+  var userId = (redirectedUrl.split('&')[2]).split('=')[1];
+  
+  var methodName = 'audio.get?';
+  
+  var accessToken = ((redirectedUrl.split('#')[1]).split('&')[0]).split('=')[1];
+  var v = '5.62';
+  
+  var methodParameters = 'owner_id=' + userId + '&need_user=0' + 'count=10';
+  
+  console.log(methodName + methodParameters + '&' + accessToken + '&' + 'v=' + v);
 }
