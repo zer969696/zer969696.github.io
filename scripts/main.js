@@ -6,15 +6,14 @@ $(document).ready(function() {
     var state = currentUrl.substr(res, 12).split('=')[1];
     
     if (state === '123456') {
-//      var baseUrl = 'https://api.vk.com/method/';
-//      
-//      var methodName = 'audio.get';
-//      
-//      
-//      var accessToken;
-//      var v;
+      $.ajax({
+        method: 'POST',
+        url: requestInit(currentUrl),
+        success: function data(response) {
+          console.log(response);
+        }
+      })
       requestInit(currentUrl);
-      
     } else {
       alert("ne ok");
     }
