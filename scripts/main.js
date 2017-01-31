@@ -3,9 +3,8 @@ $(document).ready(function() {
   
   if (+currentUrl.split('&').length === 4) {
     var res = currentUrl.indexOf('state=');
-    var state = currentUrl.substr(res, 12);
+    var state = currentUrl.substr(res, 12).split('=')[1];
     
-    console.log(state);
     if (state === '123456') {
       alert("ok");
     } else {
