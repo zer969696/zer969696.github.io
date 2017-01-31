@@ -8,8 +8,9 @@ $(document).ready(function() {
     if (state === '123456') {
       $.ajax({
         method: 'POST',
+        dataType: 'json',
         url: requestInit(currentUrl),
-        success: function data(response) {
+        success: function (response) {
           console.log(response);
         }
       })
