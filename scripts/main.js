@@ -5,6 +5,7 @@ $(document).ready(function() {
     var res = currentUrl.indexOf('state=');
     var state = currentUrl.substr(res, 12);
     
+    console.log(state);
     if (state === '123456') {
       alert("ok");
     } else {
