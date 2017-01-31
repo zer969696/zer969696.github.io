@@ -34,5 +34,5 @@ function requestInit(redirectedUrl) {
   
   var methodParameters = 'owner_id=' + userId + '&need_user=0&' + 'count=10';
   
-  console.log(methodName + methodParameters + '&access_token=' + accessToken + '&' + 'v=' + v);
+  return methodName + methodParameters + '&access_token=' + accessToken + '&' + 'v=' + v;
 }
